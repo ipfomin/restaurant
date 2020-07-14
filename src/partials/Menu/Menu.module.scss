@@ -1,0 +1,21 @@
+@import '~src/styles/mixins';
+@import '~src/styles/variables';
+
+.restMenu {
+  @include flex(column, flex-start, center);
+  display: flex;
+  height: 301px;
+  width: 100%;
+  background-image: url('/assets/restaurant-menu.png');
+  color: $white;
+  .labelWrapper {
+    width: 980px;
+    padding-top: 42px;
+    h1 {
+      font-size: 50px;
+      font-weight: bold;
+      letter-spacing: -1.79px;
+      margin: 0;
+    }
+  }
+}

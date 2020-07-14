@@ -1,0 +1,202 @@
+@import '~src/styles/mixins';
+@import '~src/styles/variables';
+
+.addDishModal {
+  display: flex;
+  width: 960px;
+  max-height: 824px;
+  border-radius: 10px;
+  box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.12);
+  background-color: $white;
+  padding-top: 97px;
+  box-sizing: border-box;
+  color: $black;
+  overflow-y: auto;
+  overflow-x: hidden;
+  .dishModalContent {
+    @include flex(column, flex-start, flex-start);
+    .topContent {
+      @include flex(column, flex-start, flex-start);
+      padding: 0 164px;
+      .dishName {
+        width: 633px;
+        max-height: 60px;
+        margin-bottom: 10px;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 1;
+        letter-spacing: -1.07px;
+        color: $black;
+        word-wrap: break-word;
+        overflow: hidden;
+      }
+      .dishDescription {
+        width: 633px;
+        max-height: 50px;
+        margin-bottom: 20px;
+        font-size: 20px;
+        letter-spacing: -0.71px;
+        color: $black;
+        word-wrap: break-word;
+        overflow: hidden;
+      }
+      .nameInput {
+        margin-bottom: 10px;
+        input {
+          width: 633px;
+        }
+        .rightPart {
+          padding: 13px 20px 11px 0;
+          span {
+            opacity: 0.6;
+            font-size: 14px;
+            line-height: 1.71;
+            letter-spacing: -0.35px;
+            color: $dark-grey;
+          }
+        }
+      }
+      .descriptionInput {
+        margin-bottom: 20px;
+        textarea {
+          width: 633px;
+          height: 118px;
+        }
+        .rightPart {
+          padding: 74px 20px 20px 0;
+          span {
+            opacity: 0.6;
+            font-size: 14px;
+            line-height: 1.71;
+            letter-spacing: -0.35px;
+            color: $dark-grey;
+          }
+        }
+      }
+      .ingredientsHeader {
+        @include flex(row, space-between, center);
+        margin-bottom: 20px;
+        width: 100%;
+        span {
+          font-size: 20px;
+          letter-spacing: -0.71px;
+        }
+        .buttonContent {
+          @include flex(row, flex-start, center);
+          padding-left: 10px;
+          label {
+            font-size: 17px;
+            font-weight: bold;
+            line-height: 1.41;
+            letter-spacing: -0.43px;
+            color: $orange;
+            cursor: inherit;
+          }
+          .buttonIcon {
+            width: 24px;
+            height: 24px;
+            margin: 4px 0;
+          }
+        }
+      }
+      .ingredientsList {
+        @include flex(column, stretch, stretch);
+        margin-bottom: 25px;
+        max-height: 174px;
+        overflow-y: auto;
+        .ingredientsListRow {
+          @include flex(row, stretch, center);
+          margin-bottom: 10px;
+          .preRowIcon {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+          }
+          .ingredientNameInput {
+            margin-right: 20px;
+            input {
+              width: 381px;
+            }
+            .ingredientNameInputRightPart {
+              padding: 12px 20px 12px 0;
+              .plusIngredientIcon {
+                width: 24px;
+                height: 24px;
+              }
+            }
+          }
+          .ingredientWeightInput {
+            margin-right: 10px;
+            input {
+              width: 140px;
+            }
+          }
+          .removeIngredient {
+            @include flex(row, center, center);
+            border-radius: 5px;
+            padding: 12px;
+            cursor: pointer;
+            .removeIngredientIcon {
+              width: 24px;
+              height: 24px;
+            }
+            &:hover {
+              background-color: $grey-hover;
+            }
+          }
+        }
+      }
+    }
+    .ingredientsStatLineStub {
+      height: 44px;
+    }
+    .ingredientsStatLine {
+      height: 44px;
+      width: 100%;
+      padding: 0 164px;
+      box-sizing: border-box;
+      box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.12);
+      .statContent {
+        @include flex(row, space-between, center);
+        height: 100%;
+        .leftStatPart,
+        .rightStatPart {
+          @include flex(row, flex-start, center);
+          font-size: 17px;
+          line-height: 1.41;
+          letter-spacing: -0.43px;
+          color: $dark-grey;
+        }
+      }
+    }
+    .sumbitButtonStub {
+      height: 64px;
+    }
+    .sumbitButton {
+      height: 64px;
+      padding: 20px 55px 20px 350px;
+      width: 100%;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      .sumbitButtonContent {
+        @include flex(row, space-between, center);
+        font-size: 17px;
+        font-weight: bold;
+        line-height: 1.41;
+        letter-spacing: -0.43px;
+        color: $white;
+        width: 100%;
+        .submitInfo {
+          @include flex(row, flex-start, center);
+          .submitLabel {
+            margin-right: 20px;
+          }
+        }
+        .addIcon {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}

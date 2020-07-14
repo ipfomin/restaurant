@@ -1,0 +1,70 @@
+@import '~src/styles/mixins';
+@import '~src/styles/variables';
+
+.menuLine {
+  @include flex(row, center, center);
+  width: 100%;
+  .menuLineDark {
+    color: $dark-grey;
+  }
+  .menuWrapper {
+    @include flex(row, stretch, center);
+    width: 980px;
+    padding: 31px 0;
+    z-index: 10;
+    .menuLineImage {
+      width: 70px;
+      height: 46px;
+    }
+    .menuItems {
+      @include flex(row, flex-start, center);
+      margin: 0 90px;
+      padding: 0;
+      li {
+        font-size: 17px;
+        font-weight: bold;
+        letter-spacing: -0.43px;
+        list-style-type: none;
+        border-radius: 5px;
+        padding: 5px 14px;
+        margin: 0 2px;
+        white-space: nowrap;
+        &.menuItemActive {
+          background-color: #ffb53a;
+        }
+      }
+    }
+    .filterInput {
+      margin-right: 20px;
+      input {
+        width: 305px;
+      }
+      .searchInput {
+        @include flex(column, center, center);
+        height: 100%;
+        padding-right: 22px;
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+    .menuAvatar {
+      @include flex(row, flex-start, center);
+      .userName {
+        font-size: 17px;
+        font-weight: bold;
+        letter-spacing: -0.43px;
+        max-width: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-right: 8px;
+        white-space: nowrap;
+      }
+      .userImage {
+        width: 18px;
+        height: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@import '~src/styles/mixins';
+@import '~src/styles/variables';
+
+.modalStackRoot {
+  position: relative;
+  overflow: visible;
+  z-index: 1000;
+}
